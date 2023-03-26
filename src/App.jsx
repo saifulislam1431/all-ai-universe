@@ -4,6 +4,7 @@ import Header from "./components/Header/Header"
 
 
 function App() {
+  
 
   return (
     <div className="App">
@@ -12,9 +13,7 @@ function App() {
         Sort by date
       </Button>
       <Cards></Cards>
-      <Button>
-        Show All
-      </Button>
+
     </div>
   )
 }
