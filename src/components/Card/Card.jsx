@@ -1,19 +1,35 @@
 import React from 'react';
 
 const Card = (props) => {
-    const{name,image} = props.card
+    const { name, image, features,published_in } = props.card
+
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src={image} alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">{name}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+            <div className="card w-96 bg-base-100 shadow-2xl">
+                <figure><img src={image} alt="Tool Image" /></figure>
+                <div className="card-body">
+                <h2 className="card-title font-bold ">Feature</h2>
+                    <ul>
+                        {
+                            features.map((feature,index)=> <li className='text-lg font-medium'>
+                                {index+1}.  {feature}
+                                </li>)
+                        }
+                    </ul>
+                </div>
+                <div className='mt-2 pr-9 pl-9 pb-7'>
+                    <div className='border-t-2 flex justify-between items-center'>
+                        <div>
+                        <h2 className="card-title pt-1">{name}</h2>
+                        <p className='pt-2 text-lg font-medium text-gray-700'><i className="fa-solid fa-calendar-days"></i> {published_in}</p>
+                        </div>
+                        <div>
+                            <button className='bg-red-200 text-error py-2 px-3 rounded-full'><i className="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 };

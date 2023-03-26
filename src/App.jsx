@@ -12,6 +12,9 @@ function App() {
         Sort by date
       </Button>
       <Cards></Cards>
+      <Button>
+        Show All
+      </Button>
     </div>
   )
 }
