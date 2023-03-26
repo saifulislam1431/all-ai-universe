@@ -4,7 +4,7 @@ const Button = (props) => {
     const {children} = props;
     return (
         <div className='text-center mt-5'>
-            <button class="btn btn-error">{children}</button>
+            <button className="btn btn-error">{children}</button>
         </div>
     );
 };
