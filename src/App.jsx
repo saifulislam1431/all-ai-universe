@@ -9,9 +9,6 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Button>
-        Sort by date
-      </Button>
       <Cards></Cards>
 
     </div>

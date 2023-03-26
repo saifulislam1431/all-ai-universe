@@ -32,9 +32,19 @@ const Cards = () => {
         .then(data=>setModalData(data.data))
     },[uniqueId])
 
+    // Sort handle
+    const handleSort= ()=>{
+        const sortedDate = cards.sort((a,b)=>{
+            return new Date(a.published_in) - new Date(b.published_in)
+        });
+        setCards([...cards, sortedDate])
+    }
+
 
     return (
+        
         <div>
+                 <span onClick={handleSort}><Button>Sort by date</Button></span>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center mt-9 ml-5'>
             {
                 cards.slice(0,showAll ? 12 : 6).map(card=><Card 
